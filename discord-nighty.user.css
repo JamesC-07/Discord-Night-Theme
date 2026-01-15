@@ -1,0 +1,1533 @@
+/* ==UserStyle==
+@name       Discord nighty theme
+@version    1.1
+@namespace  discord-nighty-theme
+@description A dark blue glassmorphism theme with stars for Discord
+@author     JamesC-07
+==/UserStyle== */
+
+@-moz-document url-prefix("https://discord.com/") {
+/**
+ * Discord nighty theme, by JamesC-07
+ * For Stylus - Apply to discord.com
+ */
+
+
+/* ═══════════════════════════════════════════════════════════════
+   GLASSMORPHISM CONTAINERS - DARK BLUE
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Root body/html - dark blue */
+body.platform-web,
+html.platform-web,
+.platform-web.theme-dark {
+  background: rgba(8, 14, 26, 0.95) !important;
+  backdrop-filter: blur(32px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(160%) brightness(1.0) !important;
+}
+
+/* App mount - dark blue */
+#app-mount {
+  background: rgba(8, 14, 26, 0.95) !important;
+  backdrop-filter: blur(32px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(160%) brightness(1.0) !important;
+}
+
+
+/* Server list */
+.wrapper-1_HaEi,
+[class*="guilds"] {
+  background: rgba(10, 18, 32, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border-right: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: inset 0 0 60px rgba(60, 100, 160, 0.08) !important;
+}
+
+/* Hide server list scrollbar */
+.wrapper-1_HaEi ::-webkit-scrollbar,
+[class*="guilds"] ::-webkit-scrollbar,
+.scroller-3IsC87::-webkit-scrollbar {
+  width: 0px !important;
+  display: none !important;
+}
+
+/* Chat area */
+.chat-2ZfjoI,
+.chatContent-3KubbW,
+[class*="chatContent"],
+main[class*="chat"] {
+  background: rgba(8, 14, 26, 0.65) !important;
+  backdrop-filter: blur(32px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(160%) brightness(1.0) !important;
+  box-shadow: inset 0 0 100px rgba(60, 100, 160, 0.05) !important;
+}
+
+/* Member list */
+.members-3WRCEx,
+[class*="members"][class*="container"] {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  border-left: 1px solid rgba(80, 120, 180, 0.12) !important;
+  box-shadow: 
+    inset 0 0 80px rgba(60, 100, 160, 0.06),
+    -2px 0 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   MESSAGE INPUT
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Chat input container */
+[class*="channelTextArea"],
+[class*="scrollableContainer"] {
+  background: rgba(15, 25, 42, 0.85) !important;  /* Dark blue glass */
+  border: 1px solid rgba(80, 120, 180, 0.5) !important;
+  border-radius: 12px !important;
+  box-shadow: 
+    0 4px 20px rgba(70, 110, 180, 0.4),       /* Soft outer glow */
+    inset 0 0 20px rgba(60, 100, 160, 0.15);  /* Inner shimmer */
+  backdrop-filter: blur(24px) saturate(170%) brightness(1.05) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(170%) brightness(1.05) !important;
+  position: relative;
+  overflow: visible !important;  /* Changed from hidden to visible */
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   USER PANEL BOTTOM
+   ═══════════════════════════════════════════════════════════════ */
+
+.panels-3wFtMD,
+[class*="panels"] {
+  background: rgba(0, 0, 0, .85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.05) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.05) !important;
+  border-top: 1px solid rgba(80, 120, 180, 0.2) !important;
+  box-shadow: 
+    0 -4px 20px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MODALS & POPOVERS
+   ═══════════════════════════════════════════════════════════════ */
+
+[class*="menu"],
+[class*="modal"],
+[class*="popout"],
+.container-2McqkF {
+  background: rgba(15, 24, 40, 0.92) !important;
+  backdrop-filter: blur(32px) saturate(170%) brightness(1.05) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(170%) brightness(1.05) !important;
+  border: 1px solid rgba(51, 77, 117, .35) !important;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 0 60px rgba(60, 100, 160, 0.08) !important;
+}
+/* Autocomplete popup - DARK BLUE */
+._13533e3c5791980f-autocomplete,
+._6b0e07cbaf13ec4e-autocomplete {
+  background: rgba(15, 24, 40, 0.95) !important;
+  backdrop-filter: blur(32px) saturate(170%) brightness(1.05) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(170%) brightness(1.05) !important;
+  border: 1px solid rgba(80, 120, 180, 0.4) !important;
+  border-radius: 8px !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.7),
+    inset 0 0 60px rgba(60, 100, 160, 0.12) !important;
+}
+
+._13533e3c5791980f-autocompleteInner,
+._6b0e07cbaf13ec4e-autocompleteInner {
+  background: rgba(12, 20, 35, 0.9) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLLBARS
+   ═══════════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 14px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(8, 14, 24, 0.5) !important;
+  border-radius: 8px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, 
+    rgba(80, 120, 180, 0.7) 0%, 
+    rgba(70, 110, 170, 0.75) 50%,
+    rgba(80, 120, 180, 0.7) 100%) !important;
+  border-radius: 8px !important;
+  border: 3px solid rgba(8, 14, 24, 0.5) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  box-shadow: 
+    inset 0 0 10px rgba(255, 255, 255, 0.1),
+    0 0 10px rgba(80, 120, 180, 0.4) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, 
+    rgba(100, 140, 200, 0.85) 0%, 
+    rgba(90, 130, 190, 0.9) 50%,
+    rgba(100, 140, 200, 0.85) 100%) !important;
+  box-shadow: 
+    inset 0 0 12px rgba(255, 255, 255, 0.15),
+    0 0 15px rgba(100, 140, 200, 0.6) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════════════════════════════════ */
+
+button[class*="lookFilled"][class*="colorBrand"] {
+  background: rgba(70, 110, 170, 0.7) !important;
+  backdrop-filter: blur(12px) saturate(170%) brightness(1.1) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(170%) brightness(1.1) !important;
+  border: 1px solid rgba(90, 130, 190, 0.6) !important;
+  box-shadow: 
+    0 4px 14px rgba(70, 110, 170, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 0 20px rgba(80, 120, 180, 0.1) !important;
+}
+
+button[class*="lookFilled"][class*="colorBrand"]:hover {
+  background: rgba(90, 130, 190, 0.8) !important;
+  box-shadow: 
+    0 6px 20px rgba(80, 120, 180, 0.5),
+    0 0 30px rgba(80, 120, 180, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 0 30px rgba(90, 130, 190, 0.15) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SELECTED/HOVER STATES
+   ═══════════════════════════════════════════════════════════════ */
+
+[class*="modeSelected"],
+[class*="channel"]:hover {
+  background: rgba(60, 90, 140, 0.3) !important;
+  backdrop-filter: blur(8px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(160%) !important;
+  border-radius: 4px;
+}
+
+/* Server icons */
+[class*="wrapper"][class*="selected"] [class*="childWrapper"],
+[class*="wrapper"]:hover [class*="childWrapper"] {
+  background: rgba(80, 120, 180, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: 
+    0 0 24px rgba(80, 120, 180, 0.7),
+    0 4px 16px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Profile popout */
+[class*="userPopoutOuter"],
+[class*="profilePanel"],
+[class*="userPopout"] {
+  background: rgba(15, 24, 40, 0.92) !important;
+  backdrop-filter: blur(32px) saturate(170%) brightness(1.05) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(170%) brightness(1.05) !important;
+  border: 1px solid rgba(80, 120, 180, 0.35) !important;
+}
+
+/* DM list hover */
+[class*="channel"][class*="selected"],
+[class*="interactive"]:hover {
+  background: rgba(60, 90, 140, 0.25) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+/* Remove chat gradient */
+._36d072eab2b2e737-chatGradient {
+  display: none !important;
+}
+
+._36d072eab2b2e737-chatGradientBase {
+  display: none !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GENERIC CONTAINERS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Generic containers */
+div[class*="container"]:not([class*="chatContent"]):not([class*="scrollableContainer"]):not([class*="sidebar"]):not([class*="title"]):not([class*="header"]):not([class*="toolbar"]) {
+  background: transparent !important;
+}
+
+/* Generic sidebars */
+div[class*="sidebar"]:not([class*="members"]) {
+  background: rgba(12, 20, 35, 0.75) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border-right: 1px solid rgba(80, 120, 180, 0.12) !important;
+  box-shadow: inset 0 0 60px rgba(60, 100, 160, 0.07) !important;
+}
+
+/* Generic scrollers */
+div[class*="scroller"]:not([class*="guilds"]):not([class*="autocomplete"]) {
+  background: rgba(16, 20, 45, 0) !important;
+  backdrop-filter: blur(16px) saturate(150%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(150%) brightness(1.0) !important;
+}
+
+/* Generic panel sections */
+section[class*="panels"]:not(.panels-3wFtMD) {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(22px) saturate(160%) brightness(1.05) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(160%) brightness(1.05) !important;
+  border-top: 1px solid rgba(80, 120, 180, 0.18) !important;
+}
+
+/* Generic member aside */
+aside[class*="members"]:not(.members-3WRCEx) {
+  background: rgba(19, 32, 57, .78) !important;
+  backdrop-filter: blur(26px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(26px) saturate(160%) brightness(1.0) !important;
+  border-left: 1px solid rgba(80, 120, 180, 0.12) !important;
+  box-shadow: 
+    inset 0 0 70px rgba(60, 100, 160, 0.065),
+    -2px 0 18px rgba(0, 0, 0, 0.28) !important;
+}
+
+/* Server header only (top bar) */
+.f37cb1984c371ee5-header {
+  position: relative !important;
+  background: rgba(0, 0, 0, .95) !important;
+  backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+
+/* Top bar container */
+._9293f6b2fc12398a-container {
+  position: relative !important;
+  background: rgba(2, 3, 7, 0.95) !important;
+  backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+
+/* Upper container */
+._9293f6b2fc12398a-upperContainer {
+  position: relative !important;
+  background: rgba(2, 3, 7, 0.95) !important;
+  backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Title and subtitle */
+.f75fb00fb7356cbe-title,
+.f75fb00fb7356cbe-subtitleContainer {
+  position: relative !important;
+  background: rgba(2, 3, 7, 0.95) !important;
+}
+
+/* Chat container */
+.f75fb00fb7356cbe-chat {
+  position: relative !important;
+  background: rgba(2, 3, 7, 0.95) !important;
+  backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Toolbar */
+._9293f6b2fc12398a-toolbar {
+  position: relative !important;
+  background: rgba(2, 3, 7, 0.95) !important;
+  backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Stars for header sections */
+.f37cb1984c371ee5-header::before,
+._9293f6b2fc12398a-container::before,
+._9293f6b2fc12398a-upperContainer::before,
+.f75fb00fb7356cbe-title::before,
+.f75fb00fb7356cbe-subtitleContainer::before,
+.f75fb00fb7356cbe-chat::before,
+._9293f6b2fc12398a-toolbar::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 0 !important;
+  background:
+radial-gradient(2px 2px at 5% 30%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 15% 60%, rgba(255,255,255,0.6), transparent 70%),
+radial-gradient(2px 2px at 25% 20%, rgba(255,255,255,0.7), transparent 70%),
+radial-gradient(2px 2px at 35% 50%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 45% 70%, rgba(255,255,255,0.6), transparent 70%),
+radial-gradient(2px 2px at 55% 40%, rgba(255,255,255,0.7), transparent 70%),
+radial-gradient(2px 2px at 65% 80%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 75% 25%, rgba(255,255,255,0.6), transparent 70%),
+radial-gradient(2px 2px at 85% 55%, rgba(255,255,255,0.7), transparent 70%),
+radial-gradient(2px 2px at 95% 35%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.9), transparent 60%),
+radial-gradient(1px 1px at 20% 40%, rgba(255,255,255,0.7), transparent 60%),
+radial-gradient(1px 1px at 30% 75%, rgba(255,255,255,0.8), transparent 60%),
+radial-gradient(1px 1px at 40% 10%, rgba(255,255,255,0.6), transparent 60%),
+radial-gradient(1px 1px at 50% 55%, rgba(255,255,255,0.9), transparent 60%),
+radial-gradient(1px 1px at 60% 25%, rgba(255,255,255,0.7), transparent 60%),
+radial-gradient(1px 1px at 70% 65%, rgba(255,255,255,0.8), transparent 60%),
+radial-gradient(1px 1px at 80% 45%, rgba(255,255,255,0.6), transparent 60%),
+radial-gradient(1px 1px at 90% 70%, rgba(255,255,255,0.9), transparent 60%),
+radial-gradient(1px 1px at 12% 80%, rgba(255,255,255,0.5), transparent 60%),
+radial-gradient(1px 1px at 22% 5%, rgba(255,255,255,0.7), transparent 60%),
+radial-gradient(1px 1px at 32% 35%, rgba(255,255,255,0.6), transparent 60%),
+radial-gradient(1px 1px at 42% 90%, rgba(255,255,255,0.8), transparent 60%),
+radial-gradient(1px 1px at 52% 20%, rgba(255,255,255,0.7), transparent 60%),
+radial-gradient(1px 1px at 62% 50%, rgba(255,255,255,0.9), transparent 60%),
+radial-gradient(1px 1px at 72% 10%, rgba(255,255,255,0.6), transparent 60%),
+radial-gradient(1px 1px at 82% 75%, rgba(255,255,255,0.8), transparent 60%),
+radial-gradient(1px 1px at 92% 15%, rgba(255,255,255,0.7), transparent 60%)
+}
+
+/* Ensure content is above stars */
+.f37cb1984c371ee5-header > *,
+._9293f6b2fc12398a-container > *,
+._9293f6b2fc12398a-upperContainer > *,
+.f75fb00fb7356cbe-title > *,
+.f75fb00fb7356cbe-subtitleContainer > *,
+.f75fb00fb7356cbe-chat > *,
+._9293f6b2fc12398a-toolbar > * {
+  position: relative;
+  z-index: 1 !important;
+}
+
+/* Search */
+._496769951eb140fe-search {
+  background: rgba(12, 20, 35, 0.7) !important;
+  backdrop-filter: blur(16px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(160%) !important;
+  border-radius: 4px;
+}
+._5e434347c823b592-panels {
+  background: rgba(4, 6, 11, .85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  overflow: hidden !important;
+}
+
+/* User panel stars */
+._5e434347c823b592-panels::before {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0; top: 0;
+  pointer-events: none;
+  z-index: 0 !important;
+  background:
+    radial-gradient(2px 2px at 5% 30%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 15% 60%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 25% 20%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 35% 50%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 45% 70%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 55% 40%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 65% 80%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 75% 25%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 85% 55%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 95% 35%, rgba(255,255,255,0.8), transparent 70%);
+}
+
+
+/* Main sidebar container */
+._5e434347c823b592-sidebar {
+  background: rgba(10, 16, 28, .8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Base container */
+._5e434347c823b592-base {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Container wrapper */
+._5e434347c823b592-container {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Positioned container */
+._629e4c86564a4ee7-positionedContainer {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Channel list scroller */
+._629e4c86564a4ee7-scroller.d125d22cdfd32cfe-thin {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Channel list wrapper */
+._5e434347c823b592-sidebarList,
+._5e434347c823b592-sidebarListRounded {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Sidebar nav wrapper */
+._2637a2b09f343032-container {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Selected/default channel container */
+.c69b6db0641110f6-containerDefault {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Selected channel state */
+.c69b6db0641110f6-selected {
+  background: rgba(60, 90, 140, 0.4) !important;
+  backdrop-filter: blur(8px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(160%) !important;
+  border-radius: 4px;
+}
+
+/* Channel content wrapper */
+._658442d9ffa4221c-content {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Section divider lines */
+._629e4c86564a4ee7-sectionDivider {
+  background: rgba(80, 120, 180, 0.2) !important;
+  border: none !important;
+  height: 1px !important;
+}
+
+/* Channel main content area */
+._29444ba32c7fbeab-mainContent {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Add button icon (+) */
+._29444ba32c7fbeab-addButtonIcon {
+  background: rgba(12, 20, 35, 0.6) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  color: rgba(160, 180, 210, 0.8) !important;
+}
+
+/* Channel icon wrapper */
+._29444ba32c7fbeab-iconVisibility._29444ba32c7fbeab-wrapper {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Default channel container */
+._29444ba32c7fbeab-containerDefault {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Channel row link wrapper */
+._2ea32c412048f708-link,
+._2ea32c412048f708-basicChannelRowLink {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+
+/* Clickable channel hover */
+._29444ba32c7fbeab-clickable:hover {
+  background: rgba(60, 90, 140, 0.25) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border-radius: 4px;
+}
+
+/* Server header only (top bar) */
+.f37cb1984c371ee5-header {
+  background: rgba(2, 4, 6, .85) !important;
+  backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+
+/* Section divider wrapper */
+div._629e4c86564a4ee7-sectionDivider {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Scroller content */
+.d125d22cdfd32cfe-content {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Scroller base */
+.d125d22cdfd32cfe-scrollerBase {
+  background: rgba(9, 15, 27, .8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Scroller fade */
+.d125d22cdfd32cfe-fade {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Nav container */
+._2637a2609f343032-container {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Better selected channel styling */
+[class*="modeSelected"],
+[class*="linkButton"][class*="selected"],
+._2ea32c412048f708-link[class*="selected"] {
+  background: rgba(60, 90, 140, 0.35) !important;
+  backdrop-filter: blur(8px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(160%) !important;
+  border-radius: 4px !important;
+}
+
+/* Sidebar theme wrapper */
+div._5e434347c823b592-sidebar.theme-dark.images-dark::after,
+div._5e434347c823b592-sidebar.theme-dark.images-dark {
+  background: rgba(9, 18, 34, .8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Child container */
+._91a9d7f7e5248a56-childContainer {
+  background: rgba(9, 27, 60, .8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Overlay */
+.c0bea05627c5dc35-overlay,
+.b32ca49f97332e1b-overlay {
+  background: rgba(6, 11, 19, .8) !important;
+  backdrop-filter: blur(32px) saturate(170%) brightness(1.05) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(170%) brightness(1.05) !important;
+}
+
+/* Section */
+._1f6ca771f1e4bb28-section {
+  background: rgba(6, 11, 19, .8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Search bar */
+.e6b7699ce8339e1c-searchBar {
+  background: rgba(7, 12, 21, .75) !important;
+  backdrop-filter: blur(16px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(160%) !important;
+  border: 1px solid rgba(80, 120, 180, 0.3) !important;
+  border-radius: 6px !important;
+}
+
+/* Members scroller */
+._99e7cad8d4c55236-scroller,
+.e6b7699ce8339e1c-privateChannels {
+  background: rgba(8, 14, 26, 0.9) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Hide scrollbars except chat and members */
+._99e7cad8d4c55236-scroller::-webkit-scrollbar,
+._629e4c86564a4ee7-scroller::-webkit-scrollbar,
+[class*="sidebar"]::-webkit-scrollbar {
+  width: 0px !important;
+  display: none !important;
+}
+
+/* Profile header */
+._9c3bea41fd465666-profileHeader {
+  background: rgba(15, 25, 42, 0.85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+
+/* Profile container */
+._9c3bea41fd465666-profile {
+  background: rgba(12, 20, 35, 0.85) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  box-shadow: inset 0 0 60px rgba(60, 100, 160, 0.07) !important;
+}
+
+
+/* Tab list scroller - position fix */
+._37bfcf3d457db7a9-tabListScroller {
+  background: rgba(12, 20, 35, 0.85) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+  margin-left: 0 !important;
+  padding-left: 50px !important;
+}
+
+/* Container - dark blue */
+.dca174a2baed7ac1-container {
+  background: rgba(12, 20, 35, 0.85) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+
+/* People column - dark blue */
+._133bf5eea8e33a34-peopleColumn {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  border-left: 1px solid rgba(80, 120, 180, 0.12) !important;
+  box-shadow: 
+    inset 0 0 80px rgba(60, 100, 160, 0.06),
+    -2px 0 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Wrapper container - dark blue */
+._72c3859781ebce8f-wrapper._0f0849b61557225e-container {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Scroller - dark blue */
+._7d20cf18f8a2784c-scroller {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Header full - dark blue */
+._00943886e1cf89d1-headerFull,
+._00943886e1cf89d1-header {
+  background: rgba(15, 25, 42, 0.85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+
+/* Section - dark blue */
+._00943886e1cf89d1-section {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Header - dark blue */
+._7d20cf18f8a2784c-header {
+  background: rgba(15, 25, 42, 0.85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+
+/* Now playing column - dark blue */
+._133bf5eea8e33a34-nowPlayingColumn {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  border-left: 1px solid rgba(80, 120, 180, 0.12) !important;
+  box-shadow: 
+    inset 0 0 80px rgba(60, 100, 160, 0.06),
+    -2px 0 20px rgba(0, 0, 0, 0.3) !important;
+}
+/* Interactions container - dark blue */
+.af3b89684c536957-interactionsContainer {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Remove menu item borders/lines */
+.ce832809562bf737-menuItemInner {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove all button borders in menus */
+[class*="menu"] button,
+[class*="menuItem"],
+[class*="item-"] {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Content header - dark blue */
+.e9e3ed8b8badfe05-contentHeader {
+  background: rgba(15, 25, 42, 0.85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+
+/* Scroller auto - dark blue */
+._6131ab3dbe0affed-scroller {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Auto scroller base */
+.d125d22cdfd32cfe-auto {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Content wrapper - dark blue */
+._084343c4f11eaaab-contentWrapper {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Wrapper container - dark blue */
+._72c3859781ebce8f-wrapper._0f0849b61557225e-container._0f0849b61557225e-md {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Button children wrapper - dark blue */
+.a22cb0c66246f5d3-buttonChildrenWrapper {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Fix channel hover in sidebar */
+._2ea32c412048f708-link:hover,
+._29444ba32c7fbeab-containerDefault:hover,
+[class*="channel"]:hover {
+  background: rgba(60, 90, 140, 0.3) !important;
+  backdrop-filter: blur(8px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(160%) !important;
+  border-radius: 4px !important;
+}
+
+/* Wrapper header - dark blue */
+._14245bb948377a25-wrapper.c656aca9a3db31a9-header {
+  background: rgba(15, 25, 42, 0.85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+
+/* Inspector - dark blue */
+.aeaaeb2a573807f0-inspector,
+.c0e32c5cffed3d9f-inspector {
+  background: rgba(12, 20, 35, 0.85) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  box-shadow: inset 0 0 60px rgba(60, 100, 160, 0.07) !important;
+}
+
+/* Scroller none - dark blue */
+.affa7e120767dd82-scroller {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Scroller none base */
+.d125d22cdfd32cfe-none {
+  background: rgba(12, 20, 35, 0.8) !important;
+}
+
+/* Remove scrollbar */
+.affa7e120767dd82-scroller::-webkit-scrollbar,
+.d125d22cdfd32cfe-none::-webkit-scrollbar {
+  width: 0px !important;
+  display: none !important;
+}
+
+/* Category list wrapper - dark blue */
+._4e6cebf8beed1ad8-wrapper.c0e32c5cffed3d9f-categoryList {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Header - dark blue */
+._8ef02eea17068b73-header {
+  background: rgba(15, 25, 42, 0.85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+
+/* Category list wrapper - dark blue */
+._4e6cebf8beed1ad8-wrapper._3ad28b0867fa3fad-categoryList {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Lottie canvas sticker - dark blue */
+._31fc2df9348cd84a-lottieCanvas,
+._31fc2df9348cd84a-stickerAsset {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Pack header wrapper - dark blue */
+._14245bb948377a25-wrapper.e94b8cb2ff7b5c8d-packHeader {
+  background: rgba(15, 25, 42, 0.85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+
+/* Header - dark blue */
+.fed6d32841cc2da2-header {
+  background: rgba(15, 25, 42, 0.85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+.a98f3b020416ad54-scroller.d125d22cdfd32cfe-thin.d125d22cdfd32cfe-scrollerBase {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+.a22cb0c66246f5d3-button.a22cb0c66246f5d3-secondary {
+  background: rgba(70, 110, 170, 0.65) !important;
+  border: 1px solid rgba(80, 120, 180, 0.4) !important;
+}
+.ae7890a1b8e75804-searchHeader {
+  background: rgba(15, 25, 42, 0.85) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+}
+.a98f3b020416ad54-searchResultsWrap {
+  background: rgba(12, 20, 35, 0.85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+._80bf8435713f6adb-message {
+  background: rgba(12, 20, 35, 0.75) !important;
+  backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+}
+.chat-2ZfjoI,
+.chatContent-3KubbW,
+[class*="chatContent"],
+main[class*="chat"] {
+  background:
+    radial-gradient(120px 120px at 85% 15%, rgba(220,230,255,0.15), transparent 60%), /* moon glow */
+    linear-gradient(180deg,
+      rgba(5, 8, 14, 0.95) 0%,
+      rgba(8, 14, 26, 0.9) 40%,
+      rgba(12, 20, 35, 0.85) 100%
+    ) !important;
+
+  backdrop-filter: blur(32px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(160%) brightness(1.0) !important;
+}
+/* ═══════════════════════════════════════════════════════════════
+   ANIMATED STARS & DARKER GRADIENT 
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Keyframe animation for gentle star movement */
+@keyframes starDrift {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(3px, -2px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+/* Bottom chat input bar - night/moon theme with darker gradient */
+.d125d22cdfd32cfe-none.d125d22cdfd32cfe-scrollerBase {
+  position: relative !important;
+  background: linear-gradient(180deg, 
+    rgba(0, 0, 0, .95) 0%,
+    rgba(10, 18, 32, 0.9) 50%,
+    rgba(9, 14, 25, .85) 100%) !important;
+  border: 1px solid rgba(80, 120, 180, 0.5) !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 4px 20px rgba(70, 110, 180, 0.),
+    inset 0 0 20px rgba(0, 0, 0, .15);
+  backdrop-filter: blur(24px) saturate(170%) brightness(1.05) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(170%) brightness(1.05) !important;
+  transition: none !important;
+  overflow: hidden;
+}
+
+
+/* Animated stars with darker gradient background */
+.d125d22cdfd32cfe-none.d125d22cdfd32cfe-scrollerBase::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background:
+    /* Darker gradient overlay */
+    linear-gradient(130deg, 
+      rgba(0, 0, 0, .0) 0%,
+      rgba(4, 9, 17, .5) 50%,
+      rgba(11, 20, 34, .5) 100%),
+    /* Animated stars */
+radial-gradient(2px 2px at 3% 5%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 2% 5%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 5% 12%, rgba(255,255,255,0.7), transparent 70%),
+radial-gradient(2px 2px at 8% 25%, rgba(255,255,255,0.6), transparent 70%),
+radial-gradient(2px 2px at 10% 40%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 10% 40%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 12% 55%, rgba(255,255,255,0.5), transparent 70%),
+radial-gradient(2px 2px at 15% 10%, rgba(255,255,255,0.7), transparent 70%),
+radial-gradient(2px 2px at 18% 30%, rgba(255,255,255,0.6), transparent 70%),
+radial-gradient(2px 2px at 20% 50%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 22% 70%, rgba(255,255,255,0.5), transparent 70%),
+radial-gradient(2px 2px at 25% 15%, rgba(255,255,255,0.7), transparent 70%),
+radial-gradient(2px 2px at 28% 35%, rgba(255,255,255,0.6), transparent 70%),
+radial-gradient(2px 2px at 30% 60%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 32% 80%, rgba(255,255,255,0.5), transparent 70%),
+radial-gradient(2px 2px at 35% 20%, rgba(255,255,255,0.7), transparent 70%),
+radial-gradient(2px 2px at 38% 40%, rgba(255,255,255,0.6), transparent 70%),
+radial-gradient(2px 2px at 40% 65%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 42% 85%, rgba(255,255,255,0.5), transparent 70%),
+radial-gradient(2px 2px at 45% 25%, rgba(255,255,255,0.7), transparent 70%),
+radial-gradient(2px 2px at 48% 45%, rgba(255,255,255,0.6), transparent 70%),
+radial-gradient(2px 2px at 50% 70%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 52% 90%, rgba(255,255,255,0.5), transparent 70%),
+radial-gradient(2px 2px at 55% 15%, rgba(255,255,255,0.7), transparent 70%),
+radial-gradient(2px 2px at 58% 35%, rgba(255,255,255,0.6), transparent 70%),
+radial-gradient(2px 2px at 60% 60%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 62% 80%, rgba(255,255,255,0.5), transparent 70%),
+radial-gradient(2px 2px at 65% 20%, rgba(255,255,255,0.7), transparent 70%),
+radial-gradient(2px 2px at 68% 40%, rgba(255,255,255,0.6), transparent 70%),
+radial-gradient(2px 2px at 70% 65%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 72% 85%, rgba(255,255,255,0.5), transparent 70%),
+radial-gradient(2px 2px at 75% 25%, rgba(255,255,255,0.7), transparent 70%),
+radial-gradient(2px 2px at 78% 45%, rgba(255,255,255,0.6), transparent 70%),
+radial-gradient(2px 2px at 80% 70%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 82% 90%, rgba(255,255,255,0.5), transparent 70%),
+radial-gradient(2px 2px at 85% 15%, rgba(255,255,255,0.7), transparent 70%),
+radial-gradient(2px 2px at 88% 35%, rgba(255,255,255,0.6), transparent 70%),
+radial-gradient(2px 2px at 90% 60%, rgba(255,255,255,0.8), transparent 70%),
+radial-gradient(2px 2px at 92% 80%, rgba(255,255,255,0.5), transparent 70%),
+radial-gradient(2px 2px at 95% 20%, rgba(255,255,255,0.7), transparent 70%);
+
+}
+/* Increase specificity if needed */
+div._63ed30c16c7151f2-nickname,
+div._4bd5201c86a2042b-defaultColor {
+  color: #fff !important;
+}
+
+/* Fix autocomplete/mention popup */
+[class*="autocomplete"],
+[class*="autocompleteInner"],
+[class*="categoryHeader"],
+[class*="autocompleteRow"] {
+}
+
+/* Stars layer stays below */
+[class*="channelTextArea"]::before,
+[class*="scrollableContainer"]::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 12px !important;
+  background:
+    /* (keep all your existing gradient and stars here) */
+    linear-gradient(135deg, 
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(4, 7, 13, 0.4) 50%,
+      rgba(6, 12, 21, 0.35) 100%),
+    radial-gradient(2px 2px at 5% 15%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 8% 45%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 12% 75%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 15% 25%, rgba(255,255,255,0.5), transparent 70%),
+    radial-gradient(2px 2px at 18% 60%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 22% 85%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 25% 35%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 28% 10%, rgba(255,255,255,0.5), transparent 70%),
+    radial-gradient(2px 2px at 32% 50%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 35% 70%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 38% 90%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 42% 20%, rgba(255,255,255,0.5), transparent 70%),
+    radial-gradient(2px 2px at 45% 55%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 48% 80%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 52% 30%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 55% 65%, rgba(255,255,255,0.5), transparent 70%),
+    radial-gradient(2px 2px at 58% 10%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 62% 45%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 65% 75%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 68% 25%, rgba(255,255,255,0.5), transparent 70%),
+    radial-gradient(2px 2px at 72% 60%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 75% 85%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 78% 35%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 82% 15%, rgba(255,255,255,0.5), transparent 70%),
+    radial-gradient(2px 2px at 85% 50%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 88% 70%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 92% 40%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 95% 20%, rgba(255,255,255,0.5), transparent 70%),
+    radial-gradient(2px 2px at 97% 90%, rgba(255,255,255,0.8), transparent 70%);
+}
+
+/* DM home icon top margin */
+[class*="listItem"]:first-of-type {
+  margin-top: 5px !important;
+}
+
+/* Bar with stars */
+.c38106a3f0c3ca76-bar {
+  position: relative !important;
+  background: rgba(2, 3, 7, 0.95) !important;
+}
+
+.c38106a3f0c3ca76-title {
+  position: relative !important;
+  background: rgba(2, 3, 7, 0.95) !important;
+}
+
+/* Stars for bar and title */
+.c38106a3f0c3ca76-bar::before,
+.c38106a3f0c3ca76-title::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 0 !important;
+  background:
+    radial-gradient(2px 2px at 5% 30%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 15% 60%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 25% 20%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 35% 50%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 45% 70%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 55% 40%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 65% 80%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 75% 25%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 85% 55%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 95% 35%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.9), transparent 60%),
+    radial-gradient(1px 1px at 20% 40%, rgba(255,255,255,0.7), transparent 60%),
+    radial-gradient(1px 1px at 30% 75%, rgba(255,255,255,0.8), transparent 60%),
+    radial-gradient(1px 1px at 40% 10%, rgba(255,255,255,0.6), transparent 60%),
+    radial-gradient(1px 1px at 50% 55%, rgba(255,255,255,0.9), transparent 60%),
+    radial-gradient(1px 1px at 60% 25%, rgba(255,255,255,0.7), transparent 60%),
+    radial-gradient(1px 1px at 70% 65%, rgba(255,255,255,0.8), transparent 60%),
+    radial-gradient(1px 1px at 80% 45%, rgba(255,255,255,0.6), transparent 60%),
+    radial-gradient(1px 1px at 90% 70%, rgba(255,255,255,0.9), transparent 60%),
+    radial-gradient(1px 1px at 12% 80%, rgba(255,255,255,0.5), transparent 60%),
+    radial-gradient(1px 1px at 22% 5%, rgba(255,255,255,0.7), transparent 60%),
+    radial-gradient(1px 1px at 32% 35%, rgba(255,255,255,0.6), transparent 60%),
+    radial-gradient(1px 1px at 42% 90%, rgba(255,255,255,0.8), transparent 60%),
+    radial-gradient(1px 1px at 52% 20%, rgba(255,255,255,0.7), transparent 60%),
+    radial-gradient(1px 1px at 62% 50%, rgba(255,255,255,0.9), transparent 60%),
+    radial-gradient(1px 1px at 72% 10%, rgba(255,255,255,0.6), transparent 60%),
+    radial-gradient(1px 1px at 82% 75%, rgba(255,255,255,0.8), transparent 60%),
+    radial-gradient(1px 1px at 92% 15%, rgba(255,255,255,0.7), transparent 60%);
+}
+
+/* Ensure content is above stars */
+.c38106a3f0c3ca76-bar > *,
+.c38106a3f0c3ca76-title > * {
+  position: relative;
+  z-index: 1 !important;
+}
+
+/* Scroller auto dark blue */
+._6131ab3dbe0affed-scroller {
+  background: rgba(8, 14, 26, 0.9) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Account profile card dark blue */
+._1fed1dd06c7aabf7-accountProfileCard {
+  background: rgba(8, 14, 26, 0.9) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Auto scroller base dark blue */
+.d125d22cdfd32cfe-auto.d125d22cdfd32cfe-scrollerBase {
+  background: rgba(8, 14, 26, 0.9) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Content body dark blue */
+.e9e3ed8b8badfe05-contentBody {
+  background: rgba(8, 14, 26, 0.9) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Background dark blue */
+._1fed1dd06c7aabf7-background {
+  background: rgba(8, 14, 26, 0.9) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Field dark blue */
+._1fed1dd06c7aabf7-field {
+  background: rgba(8, 14, 26, 0.9) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+
+._1fed1dd06c7aabf7-fieldSpacerBottom {
+  background: rgba(8, 14, 26, 0.9) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Container dark blue */
+._8a031a135bfcb9ba-container {
+  background: rgba(8, 14, 26, 0.9) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+    
+/* Messages popout header - dark blue */
+.e8b59c4b335dd2fc-header {
+  background: rgba(15, 25, 42, 0.85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+
+/* Messages popout scroller - dark blue (more specific) */
+.e8b59c4b335dd2fc-messagesPopout {
+  background: rgba(12, 20, 35, 0.85) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Header - dark blue */
+.d9c8822889d1d4a1-header {
+  background: rgba(15, 25, 42, 0.85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+    
+/* Message group cozy - dark blue */
+.e8b59c4b335dd2fc-messageGroupCozy.c19a557985eb7793-wrapper.c19a557985eb7793-cozy {
+  background: rgba(12, 20, 35, 0.75) !important;
+  backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Message group wrapper - dark blue */
+.e8b59c4b335dd2fc-messageGroupWrapper {
+  background: rgba(12, 20, 35, 0.75) !important;
+  backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) brightness(1.0) !important;
+}
+/* Remove hover from channel category/section headers */
+[class*="containerDefault"][class*="categoryItem"],
+[class*="container"][class*="category"],
+h2[class*="container"],
+div[role="button"][class*="container"]:has(h2) {
+  background: transparent !important;
+}
+
+div[role="button"][class*="container"]:has(h2):hover {
+  background: transparent !important;
+  cursor: default;
+}
+
+/* Cleaner channel hover - subtle and refined */
+._2ea32c412048f708-link:hover,
+._29444ba32c7fbeab-containerDefault:hover,
+[class*="channel"]:hover,
+._29444ba32c7fbeab-clickable:hover {
+  background: rgba(60, 90, 140, 0.15) !important;
+  backdrop-filter: blur(8px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(160%) !important;
+  border-radius: 4px !important;
+  transition: background 0.15s ease !important;
+}
+    
+    /* Remove ALL hover effects from channel categories/sections */
+[class*="containerDefault"]:has(h2),
+[class*="containerDefault"]:has([class*="iconVisibility"]),
+div[role="button"]:has(h2),
+div[role="button"]:has(svg[class*="iconItem"]),
+._29444ba32c7fbeab-containerDefault:has(h2),
+._29444ba32c7fbeab-containerDefault:has(._29444ba32c7fbeab-iconVisibility) {
+  background: transparent !important;
+}
+
+[class*="containerDefault"]:has(h2):hover,
+[class*="containerDefault"]:has([class*="iconVisibility"]):hover,
+div[role="button"]:has(h2):hover,
+div[role="button"]:has(svg[class*="iconItem"]):hover,
+._29444ba32c7fbeab-containerDefault:has(h2):hover,
+._29444ba32c7fbeab-containerDefault:has(._29444ba32c7fbeab-iconVisibility):hover {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+    
+    /* Remove hover ONLY from category headers (not channels) */
+[class*="containerDefault"]:has(h2),
+[class*="containerDefault"]:has(h2) *,
+div[role="button"]:has(h2),
+div[role="button"]:has(h2) *,
+._29444ba32c7fbeab-containerDefault:has(h2),
+._29444ba32c7fbeab-containerDefault:has(h2) * {
+  background: transparent !important;
+}
+
+[class*="containerDefault"]:has(h2):hover,
+[class*="containerDefault"]:has(h2):hover *,
+div[role="button"]:has(h2):hover,
+div[role="button"]:has(h2):hover *,
+._29444ba32c7fbeab-containerDefault:has(h2):hover,
+._29444ba32c7fbeab-containerDefault:has(h2):hover *,
+._29444ba32c7fbeab-containerDefault:has(h2):hover span,
+._29444ba32c7fbeab-containerDefault:has(h2):hover div {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Keep channel hover effect subtle */
+._2ea32c412048f708-link:hover,
+._29444ba32c7fbeab-containerDefault:not(:has(h2)):hover,
+[class*="channel"]:hover,
+._29444ba32c7fbeab-clickable:not(:has(h2)):hover,
+a[class*="link"]:hover {
+  background: rgba(60, 90, 140, 0.15) !important;
+  backdrop-filter: blur(8px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(160%) !important;
+  border-radius: 4px !important;
+  transition: background 0.15s ease !important;
+}
+    
+    /* Content - dark blue */
+.dbba9320d9989b05-content {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+    
+    /* Content region scroller - dark blue */
+._23e6b439306f125a-contentRegionScroller.d125d22cdfd32cfe-auto.d125d22cdfd32cfe-scrollerBase {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Content column - dark blue */
+._23e6b439306f125a-contentColumn._23e6b439306f125a-contentColumnDefault {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+    
+    /* Search header container - dark blue */
+._98d1ce21de5c55ca-searchHeaderContainer {
+  background: rgba(15, 25, 42, 0.85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border-bottom: 1px solid rgba(80, 120, 180, 0.15) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(60, 100, 160, 0.06) !important;
+}
+
+/* Table - dark blue */
+.b4ec0b0549a3448a-table {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Pagination container - dark blue */
+.e8f197ff80df8bf4-paginationContainer {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Tools container - dark blue */
+._23e6b439306f125a-toolsContainer {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+
+/* Standard sidebar view - dark blue */
+._23e6b439306f125a-standardSidebarView {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+    
+    /* Custom scroller content region - dark blue */
+._23e6b439306f125a-customScroller._23e6b439306f125a-contentRegionScroller.d125d22cdfd32cfe-auto.d125d22cdfd32cfe-scrollerBase {
+  background: rgba(12, 20, 35, 0.8) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+}
+    
+    /* Members list - much darker blue with stars */
+.c8ffbb79449f399c-members.d125d22cdfd32cfe-thin.d125d22cdfd32cfe-scrollerBase {
+  position: relative !important;
+  background: rgba(2, 4, 8, 0.95) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  border-left: 1px solid rgba(80, 120, 180, 0.12) !important;
+  box-shadow: 
+    inset 0 0 80px rgba(60, 100, 160, 0.06),
+    -2px 0 20px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+}
+
+/* Stars for members list */
+.c8ffbb79449f399c-members.d125d22cdfd32cfe-thin.d125d22cdfd32cfe-scrollerBase::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 0 !important;
+  background:
+    radial-gradient(2px 2px at 5% 30%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 15% 60%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 25% 20%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 35% 50%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 45% 70%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 55% 40%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 65% 80%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(2px 2px at 75% 25%, rgba(255,255,255,0.6), transparent 70%),
+    radial-gradient(2px 2px at 85% 55%, rgba(255,255,255,0.7), transparent 70%),
+    radial-gradient(2px 2px at 95% 35%, rgba(255,255,255,0.8), transparent 70%),
+    radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.9), transparent 60%),
+    radial-gradient(1px 1px at 20% 40%, rgba(255,255,255,0.7), transparent 60%),
+    radial-gradient(1px 1px at 30% 75%, rgba(255,255,255,0.8), transparent 60%),
+    radial-gradient(1px 1px at 40% 10%, rgba(255,255,255,0.6), transparent 60%),
+    radial-gradient(1px 1px at 50% 55%, rgba(255,255,255,0.9), transparent 60%),
+    radial-gradient(1px 1px at 60% 25%, rgba(255,255,255,0.7), transparent 60%),
+    radial-gradient(1px 1px at 70% 65%, rgba(255,255,255,0.8), transparent 60%),
+    radial-gradient(1px 1px at 80% 45%, rgba(255,255,255,0.6), transparent 60%),
+    radial-gradient(1px 1px at 90% 70%, rgba(255,255,255,0.9), transparent 60%);
+}
+
+/* Ensure member content is above stars */
+.c8ffbb79449f399c-members > * {
+  position: relative;
+  z-index: 1 !important;
+}
+/* Jump to present bar - dark blue */
+._0f481cbbd7530492-jumpToPresentBar._0f481cbbd7530492-bottomBar._0f481cbbd7530492-barBase {
+  background: rgba(12, 20, 35, 0.85) !important;
+  backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) brightness(1.0) !important;
+  border: 1px solid rgba(80, 120, 180, 0.3) !important;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.4),
+    inset 0 0 20px rgba(60, 100, 160, 0.08) !important;
+}
+    /* Force members list to be scrollable */
+.c8ffbb79449f399c-members.d125d22cdfd32cfe-thin.d125d22cdfd32cfe-scrollerBase {
+  position: relative !important;
+  background: rgba(2, 4, 8, 0.95) !important;
+  backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) brightness(1.0) !important;
+  border-left: 1px solid rgba(80, 120, 180, 0.12) !important;
+  box-shadow: 
+    inset 0 0 80px rgba(60, 100, 160, 0.06),
+    -2px 0 20px rgba(0, 0, 0, 0.3) !important;
+  overflow-y: auto !important; /* Changed from hidden to auto */
+  overflow-x: hidden !important;
+}
+    
+    
+}
+
